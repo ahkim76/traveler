@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="apple-touch-icon" sizes="180x180" href="imgs/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imgs/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imgs/favicon-16x16.png">
+    <link rel="manifest" href="imgs/site.webmanifest">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin=""
+    />
+    <script
+      defer
+      src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""
+    ></script>
+
+    <!-- <script defer src="other.js"></script> -->
+    <script defer src="script.js"></script>
+    <title>Traveler</title>
+  </head>
+  <body>
+    <div class="sidebar">
+      <img src="imgs/traveler-logo.png" alt="Logo" class="logo" />
+
+      <ul class="locations">
+        <form class="form hidden">
+          <div class="form__row">
+            <label class="form__label">Type</label>
+            <select class="form__input form__input--type">
+              <option value="vacation">Vacation</option>
+              <option value="business">Business</option>
+              <option value="education">Education</option>
+            </select>
+          </div>
+          <div class="form__row">
+            <label class="form__label"># of Days</label>
+            <input class="form__input form__input--duration" placeholder="2" />
+          </div>
+          <div class="form__row">
+            <label class="form__label">Review</label>
+            <select
+              class="form__input form__input--review">
+              <option value ='1'>1 Star</option>
+              <option value ='2'>2 Star</option>
+              <option value ='3'>3 Star</option>
+              <option value ='4'>4 Star</option>
+              <option value ='5'>5 Star</option>
+            </select>
+            
+          </div>
+
+          <div class="form__row">
+            <label class="form__label">Fun?</label>
+            <select class="form__input form__input--fun">
+              <option value ="yes">Yes</option>
+              <option value="sorta">Sorta</option>
+              <option value="no">No</option>
+              </select>
+          </div>
+         
+          <button class="form__btn">OK</button>
+        </form>
+
+       
+      </ul>
+      <div class="delete">
+        <p class="delete-text">Click Here to Reset</p>
+      </div>
+      <p class="copyright">
+        &copy; Built by Alex Kim. 
+       
+      </p>
+    </div>
+
+    <div id="map"></div>
+  </body>
+</html>
